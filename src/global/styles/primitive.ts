@@ -1,0 +1,42 @@
+export default {
+  colors: {
+    Neutral: {
+      0: '#FFFFFF',
+      25: '#FAFAFA',
+      50: '#FAFAFA',
+      75: '#F4F2F2',
+      100: '#EEEEEE',
+      200: '#E0E0E0',
+      300: '#DDDDDD',
+      400: '#BDBDBD',
+      500: '#9E9E9E',
+      600: '#757575',
+      700: '#616161',
+      800: '#424242',
+      900: '#212121',
+    },
+
+    Green: {
+      0: '#FFFFFF',
+      25: '#F4FBF8',
+      50: '#D4F1E0',
+      100: '#B1E5CD',
+      200: '#8ED9BB',
+      300: '#6ACDA9',
+      400: '#45C096',
+      500: '#1E8C6E',
+      600: '#00726B',
+      700: '#14554A',
+      800: '#0F4038',
+      900: '#092A26',
+    },
+  },
+  fonts: {
+    montserratLight: 'Montserrat-Light',
+    montserratRegular: 'Montserrat-Regular',
+    montserratMedium: 'Montserrat-Medium',
+    montserratBold: 'Montserrat-Bold',
+    montserratBlack: 'Montserrat-Black',
+    montserratSemiBold: 'Montserrat-SemiBold',
+  },
+};
