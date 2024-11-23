@@ -2,11 +2,12 @@ import {View} from 'react-native';
 import styled from 'styled-components/native';
 import primitive from '../../global/styles/primitive';
 
-export const Container = styled(View)`
+export const Overlay = styled.View`
   width: 100%;
   height: 100%;
+  justify-content: center;
+  align-items: center;
   background-color: rgba(0, 0, 0, 0.5);
-  justify-content: flex-end;
 `;
 
 export const ContentContainer = styled(View)`
@@ -16,11 +17,13 @@ export const ContentContainer = styled(View)`
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   padding: 16px;
+  bottom: 0px;
+  position: absolute;
 `;
 
 export const HandleBar = styled(View)`
-  width: 40px;
-  height: 4px;
+  width: 60px;
+  height: 6px;
   background-color: ${primitive.colors.Neutral[300]};
   border-radius: 2px;
   align-self: center;
