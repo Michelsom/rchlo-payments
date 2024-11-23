@@ -1,5 +1,5 @@
 export function maskValue(value: number) {
-  return new Intl.NumberFormat(undefined, {
+  return new Intl.NumberFormat('pt-BR', {
     style: 'currency',
     currency: 'BRL',
     minimumFractionDigits: 2,
