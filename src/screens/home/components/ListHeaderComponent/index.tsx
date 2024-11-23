@@ -71,9 +71,12 @@ export const ListHeaderComponent = ({
       <GlobalTextComponent
         color="Neutral.900"
         fontSize={16}
-        lineHeight={18}
-        fontFamily="montserratLight"
-        style={{width: '100%', textAlign: 'left', marginTop: 24}}
+        fontFamily="montserratSemiBold"
+        style={{
+          width: '100%',
+          textAlign: 'left',
+          marginTop: 32,
+        }}
         text="Cartões de crédito"
       />
     ) : null}
