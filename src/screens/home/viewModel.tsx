@@ -12,6 +12,8 @@ export const usePaymentViewModel = () => {
   const {navigate} = useNavigation();
   const {createPayment, cardData} = usePayment();
   const dispatch = useDispatch();
+  const [modalVisible, setModalVisible] = useState(false);
+
   const {payment, simulation} = useSelector(
     (store: RootState) => store.payment,
   );
@@ -43,5 +45,7 @@ export const usePaymentViewModel = () => {
     sendPayment,
     payment,
     simulation,
+    modalVisible,
+    setModalVisible,
   };
 };

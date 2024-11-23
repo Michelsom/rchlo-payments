@@ -6,6 +6,7 @@ import {SelectPaymentButton} from '../../components/SelectPaymentButton';
 import GlobalSafeAreaView from '../../global/components/GlobalSafeArea';
 import {Card} from '../../models/userData';
 import {maskValue} from '../../utils/masks';
+import {Installments} from '../installments';
 import {ListHeaderComponent} from './components/ListHeaderComponent';
 import {PaymentInfo} from './components/PaymentInfo';
 import * as S from './styles';
@@ -15,19 +16,19 @@ export const Home = () => {
   const {
     cardData,
     handleButton,
-    navigate,
     responseData,
     payment,
     sendPayment,
     simulation,
+    modalVisible,
+    setModalVisible,
   } = usePaymentViewModel();
 
   const handleInstallmentNavigation = () => {
     if (responseData?.payment.simulation) {
-      navigate('Installments', {installments: responseData.payment.simulation});
+      setModalVisible(true);
     }
   };
-
   const renderItem: ListRenderItem<Card> = ({item}) => {
     const isSelected = item.cardId === cardData?.card.cardId;
     return (
@@ -40,7 +41,7 @@ export const Home = () => {
           brandCard={item.brand}
           hasRadio
         />
-        {isSelected && (
+        {isSelected ? (
           <>
             <SelectPaymentButton
               handleButton={handleInstallmentNavigation}
@@ -54,11 +55,11 @@ export const Home = () => {
               selected
               leftIconName="keyboard-arrow-right"
             />
-            {simulation && (
+            {simulation ? (
               <PaymentInfo simulation={simulation} payment={payment} />
-            )}
+            ) : null}
           </>
-        )}
+        ) : null}
       </>
     );
   };
@@ -83,10 +84,13 @@ export const Home = () => {
           alwaysBounceVertical={false}
         />
       </S.Content>
-
+      <Installments
+        isVisible={modalVisible}
+        onClose={() => setModalVisible(false)}
+      />
       <PaymentResume
         title="Pagar"
-        disableButton={!!cardData && !!simulation}
+        disableButton={!cardData || !simulation}
         handleButton={sendPayment}
       />
     </GlobalSafeAreaView>
