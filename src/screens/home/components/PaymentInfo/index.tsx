@@ -10,85 +10,95 @@ export const PaymentInfo = ({
 }: {
   simulation: Simulation;
   payment: Payment;
-}) => (
-  <InfoContainer>
-    <GlobalContainer
-      direction="row"
-      justify="space-between"
-      alignItems="center">
-      <GlobalTextComponent
-        color="Neutral.800"
-        fontSize={14}
-        lineHeight={20}
-        fontFamily="montserratLight"
-        text={'Valor a transferir'}
-      />
-      <GlobalTextComponent
-        color="Neutral.800"
-        fontSize={14}
-        lineHeight={20}
-        fontFamily="montserratLight"
-        text={maskValue(payment.amount)}
-      />
-    </GlobalContainer>
-    <GlobalContainer
-      direction="row"
-      justify="space-between"
-      alignItems="center">
-      <GlobalTextComponent
-        color="Neutral.800"
-        fontSize={14}
-        lineHeight={20}
-        fontFamily="montserratLight"
-        text={'Taxa do cartão'}
-      />
-      <GlobalTextComponent
-        color="Neutral.800"
-        fontSize={12}
-        lineHeight={20}
-        fontFamily="montserratLight"
-        text={maskValue(payment.amount)}
-      />
-    </GlobalContainer>
-    <GlobalContainer
-      direction="row"
-      justify="space-between"
-      alignItems="center">
-      <GlobalTextComponent
-        color="Neutral.800"
-        fontSize={14}
-        lineHeight={20}
-        fontFamily="montserratLight"
-        text={'Taxa de parcelamento'}
-      />
-      <GlobalTextComponent
-        color="Neutral.800"
-        fontSize={12}
-        lineHeight={20}
-        fontFamily="montserratLight"
-        text={maskValue(payment.amount)}
-      />
-    </GlobalContainer>
-    <GlobalContainer
-      direction="row"
-      justify="space-between"
-      alignItems="center">
-      <GlobalTextComponent
-        color="Neutral.800"
-        fontSize={14}
-        lineHeight={20}
-        fontFamily="montserratLight"
-        text={'Valor a transferir + taxas'}
-      />
-      <GlobalTextComponent
-        color="Neutral.800"
-        fontSize={12}
-        lineHeight={20}
-        fontFamily="montserratLight"
-        text={`${simulation.installments}x ${maskValue(
-          simulation.installmentAmount,
-        )}`}
-      />
-    </GlobalContainer>
-  </InfoContainer>
-);
+}) => {
+  const {installments, fees, installmentAmount} = simulation;
+  const cardFee = fees.fixed.amount;
+  const installmentFee = fees.installments.amount;
+  const totalAmount = installmentAmount * installments;
+
+  return (
+    <InfoContainer>
+      <GlobalContainer
+        direction="column"
+        justify="center"
+        alignItems="flex-start">
+        <GlobalTextComponent
+          color="Neutral.800"
+          fontSize={14}
+          style={{marginBottom: 8}}
+          fontFamily="montserratRegular"
+          text={'Valor a transferir'}
+        />
+        <GlobalTextComponent
+          color="Neutral.800"
+          fontSize={14}
+          style={{marginBottom: 8}}
+          fontFamily="montserratRegular"
+          text={'Taxa do cartão'}
+        />
+        <GlobalTextComponent
+          color="Neutral.800"
+          fontSize={14}
+          style={{marginBottom: 8}}
+          fontFamily="montserratRegular"
+          text={'Taxa de parcelamento'}
+        />
+        <GlobalTextComponent
+          color="Neutral.800"
+          fontSize={14}
+          style={{marginBottom: 8}}
+          fontFamily="montserratRegular"
+          text={'Parcelas + taxas'}
+        />
+        <GlobalTextComponent
+          color="Neutral.800"
+          fontSize={14}
+          fontFamily="montserratRegular"
+          text={'Valor total a pagar'}
+        />
+      </GlobalContainer>
+
+      <GlobalContainer
+        direction="column"
+        justify="center"
+        alignItems="flex-end">
+        <GlobalTextComponent
+          color="Neutral.800"
+          fontSize={14}
+          style={{marginBottom: 8}}
+          fontFamily="montserratBold"
+          text={maskValue(payment.amount) || ''}
+        />
+        <GlobalTextComponent
+          color="Neutral.800"
+          fontSize={14}
+          style={{marginBottom: 8}}
+          fontFamily="montserratBold"
+          text={maskValue(cardFee || 0)}
+        />
+        <GlobalTextComponent
+          color="Neutral.800"
+          fontSize={14}
+          style={{marginBottom: 8}}
+          fontFamily="montserratBold"
+          text={maskValue(installmentFee) || '-'}
+        />
+        <GlobalTextComponent
+          color="Neutral.800"
+          fontSize={14}
+          fontFamily="montserratBold"
+          style={{marginBottom: 8}}
+          text={`${simulation.installments}x ${maskValue(
+            simulation.amountToPay / simulation.installments,
+          )}`}
+        />
+        <GlobalTextComponent
+          color="Neutral.800"
+          fontSize={14}
+          fontFamily="montserratBold"
+          text={maskValue(totalAmount) || '-'}
+        />
+      </GlobalContainer>
+    </InfoContainer>
+  );
+};
