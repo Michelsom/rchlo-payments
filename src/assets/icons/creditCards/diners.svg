@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="18" viewBox="0 0 30 18">
+  <g id="diners" transform="translate(0 -3)">
+    <rect id="Retângulo_4936" data-name="Retângulo 4936" width="30" height="18" rx="4" transform="translate(0 3)" fill="#2183cb"/>
+    <path id="Caminho_5895" data-name="Caminho 5895" d="M11,16.975a5,5,0,0,0,0-9.951V7h3v.025a5,5,0,0,1,0,9.951V17H11Z" transform="translate(2.75)" fill="#fff" fill-rule="evenodd"/>
+    <path id="Caminho_5896" data-name="Caminho 5896" d="M11,17a5,5,0,1,0-5-5A5,5,0,0,0,11,17Zm0-1a4,4,0,1,0-4-4A4,4,0,0,0,11,16Z" transform="translate(2.75)" fill="#fff" fill-rule="evenodd"/>
+    <path id="Caminho_5897" data-name="Caminho 5897" d="M11.5,14.958a3,3,0,0,0,0-5.917Zm-1,0V9.042a3,3,0,0,0,0,5.917Z" transform="translate(2.75)" fill="#fff" fill-rule="evenodd"/>
+  </g>
+</svg>

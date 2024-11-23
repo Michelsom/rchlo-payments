@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="18" viewBox="0 0 30 18">
+  <g id="hipercard" transform="translate(0 -3)">
+    <rect id="Retângulo_4938" data-name="Retângulo 4938" width="30" height="18" rx="4" transform="translate(0 3)" fill="#ca0018"/>
+    <g id="Grupo_2611" data-name="Grupo 2611" transform="translate(3)">
+      <path id="Caminho_5904" data-name="Caminho 5904" d="M14.52,8c-.173,1.216-.369,2.408-.564,3.6-1.257.014-2.541.067-3.754-.03.229-1.165.394-2.4.621-3.568H9.468C8.983,10.973,8.542,13.994,8,16.906H9.383c.217-1.494.42-3,.706-4.422a31.191,31.191,0,0,1,3.726.031c-.234,1.476-.516,2.9-.734,4.392h1.383c.444-3.017.913-6.008,1.468-8.906Z" fill="#fefefe" fill-rule="evenodd"/>
+    </g>
+  </g>
+</svg>
