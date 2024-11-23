@@ -4,18 +4,24 @@ import primitive from '../../global/styles/primitive';
 
 export const ButtonContainer = styled.TouchableOpacity.attrs({
   activeOpacity: 0.7,
-})`
+})<{hasDescription: boolean}>`
   width: 100%;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 5px 10px;
+  padding: ${({hasDescription}) => (!hasDescription ? 5 : 16)}px 10px;
   background-color: ${primitive.colors.Neutral[0]};
   border-radius: 8px;
-  margin-top: 16px;
-  ${Platform.OS === 'ios'
-    ? 'boxShadow: 0px 4px 4px rgba(0, 0, 0, 0.08)'
-    : 'elevation: 2.5'}
+  margin-top: ${({hasDescription}) => (!hasDescription ? 16 : 12)}px;
+  border: 0.33px solid ${primitive.colors.Neutral[200]};
+  ${({hasDescription}) =>
+    Platform.OS === 'ios'
+      ? !hasDescription
+        ? 'boxShadow: 0px 4px 4px rgba(0, 0, 0, 0.08)'
+        : 'boxShadow: 0px 2px 2px rgba(0, 0, 0, 0.05)'
+      : !hasDescription
+      ? 'elevation: 2'
+      : 'elevation: 1'};
 `;
 
 export const RadioContainer = styled.View`

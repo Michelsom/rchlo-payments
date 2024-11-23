@@ -31,7 +31,7 @@ export const SelectPaymentButton = memo(
     hasRadio,
     leftIconName,
   }: SelectPaymentButtonProps) => (
-    <S.ButtonContainer onPress={handleButton}>
+    <S.ButtonContainer onPress={handleButton} hasDescription={!description}>
       {hasRadio ? (
         <S.RadioContainer>
           <GlobalIcon
