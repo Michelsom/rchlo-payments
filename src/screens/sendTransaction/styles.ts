@@ -11,8 +11,8 @@ export const Container = styled.View`
 `;
 
 export const Animation = styled(LottieView)`
-  width: 200px;
-  height: 200px;
+  width: 170px;
+  height: 170px;
 `;
 
 export const ContentView = styled.View`

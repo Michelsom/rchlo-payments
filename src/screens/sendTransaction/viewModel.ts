@@ -31,5 +31,11 @@ export const useSendTransactionViewModel = () => {
     goBack();
   };
 
-  return {loading, sendPayment, payment, dateNow, handleRightAction};
+  return {
+    loading,
+    sendPayment,
+    payment,
+    dateNow,
+    handleRightAction,
+  };
 };
