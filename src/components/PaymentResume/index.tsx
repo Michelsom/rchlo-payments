@@ -24,34 +24,33 @@ export const PaymentResume = ({
           simulation.installmentAmount,
         )}`
       : maskValue(paymentData.amount);
-
+  console.log('---->>', disableButton);
   return (
     <S.Container
-      disabled={!disableButton}
+      disabled={disableButton}
       activeOpacity={1}
+      style={{boxShadow: '0px -0.1px 10px rgba(0, 0, 0, 0.15)'}}
       onPress={handleButton}>
       <S.InfoContainer>
         <GlobalTextComponent
-          color="Neutral.700"
-          fontSize={16}
-          lineHeight={24}
-          fontFamily="montserratLight"
+          color="Neutral.900"
+          fontSize={20}
+          fontFamily="montserratRegular"
           text="Valor a ser pago"
         />
         <GlobalTextComponent
           color="Neutral.900"
-          fontSize={20}
-          lineHeight={22}
-          fontFamily="montserratLight"
+          fontSize={22}
+          fontFamily="montserratBold"
           text={installmentText}
         />
       </S.InfoContainer>
       <S.ButtonContainer disabled={disableButton}>
         <GlobalTextComponent
           color="Neutral.0"
-          fontSize={16}
+          fontSize={18}
           lineHeight={18}
-          fontFamily="montserratLight"
+          fontFamily="montserratMedium"
           text={title || 'Pagar'}
         />
       </S.ButtonContainer>

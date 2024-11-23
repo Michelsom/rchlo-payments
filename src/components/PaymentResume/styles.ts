@@ -4,7 +4,7 @@ import primitive from '../../global/styles/primitive';
 
 export const Container = styled.TouchableOpacity`
   width: 100%;
-  height: 14%;
+  height: ${Platform.OS === 'android' ? 10 : 12}%;
   padding: 20px;
   align-items: center;
   justify-content: space-between;
@@ -12,17 +12,6 @@ export const Container = styled.TouchableOpacity`
   background-color: ${primitive.colors.Neutral[0]};
   position: absolute;
   bottom: 0;
-  ${Platform.select({
-    ios: `
-      shadow-color: #000;
-      shadow-offset: 0px 2px;
-      shadow-opacity: 0.15;
-      shadow-radius: 4.84px;
-    `,
-    android: `
-      elevation: 5;
-    `,
-  })}
 `;
 
 export const InfoContainer = styled.View`
@@ -37,5 +26,5 @@ export const ButtonContainer = styled.View<{disabled: boolean}>`
   padding: 8px 16px;
   border-radius: 20px;
   background-color: ${({disabled}) =>
-    disabled ? primitive.colors.Green[600] : primitive.colors.Neutral[500]};
+    disabled ? primitive.colors.Neutral[500] : primitive.colors.Green[600]};
 `;
