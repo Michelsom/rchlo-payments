@@ -4,6 +4,7 @@ import {HeaderComponent} from '../../components/HeaderComponent';
 import {GlobalContainer} from '../../global/components/GlobalContainer';
 import GlobalSafeAreaView from '../../global/components/GlobalSafeArea';
 import {GlobalTextComponent} from '../../global/components/GlobalTextComponent';
+import primitive from '../../global/styles/primitive';
 import {maskValue} from '../../utils/masks';
 import * as S from './styles';
 import {useSendTransactionViewModel} from './viewModel';
@@ -13,28 +14,41 @@ export const SendTransaction = () => {
 
   if (loading) {
     return (
-      <S.Container onLayout={sendPayment}>
-        <S.Animation
-          source={LoadingAnimation}
-          autoPlay
-          loop
-          testID="loading-animation"
-        />
-        <GlobalTextComponent
-          color="Neutral.0"
-          fontSize={34}
-          lineHeight={38}
-          fontFamily="montserratBold"
-          textAlign="center"
-          text={'Processando\nsua transferência'}
-        />
-      </S.Container>
+      <GlobalContainer
+        direction="column"
+        event={sendPayment}
+        style={{
+          flex: 1,
+          backgroundColor: primitive.colors.Green[600],
+        }}
+        children={
+          <>
+            <S.Animation
+              source={LoadingAnimation}
+              autoPlay
+              loop
+              testID="loading-animation"
+            />
+            <GlobalTextComponent
+              color="Neutral.0"
+              fontSize={34}
+              lineHeight={38}
+              fontFamily="montserratBold"
+              textAlign="center"
+              text={'Processando\nsua transferência'}
+            />
+          </>
+        }
+      />
     );
   }
 
   return (
     <GlobalSafeAreaView>
-      <S.ContentView>
+      <GlobalContainer
+        direction="column"
+        style={{flex: 1, padding: 16}}
+        justify="flex-start">
         <HeaderComponent
           rightIconName="close"
           handleRightAction={handleRightAction}
@@ -46,13 +60,13 @@ export const SendTransaction = () => {
           style={{width: '100%', textAlign: 'center', marginTop: 16}}
           text={'Pix realizado com\nsucesso!'}
         />
-        <S.Animation source={CheckedAnimation} loop={false} />
 
         <GlobalContainer
           direction="column"
-          justify="space-between"
+          justify="center"
           alignItems="center"
-          style={{width: '100%'}}>
+          style={{width: '100%', height: '70%'}}>
+          <S.Animation source={CheckedAnimation} loop={false} autoPlay />
           <GlobalTextComponent
             color="Neutral.800"
             fontSize={22}
@@ -121,7 +135,7 @@ export const SendTransaction = () => {
             </GlobalContainer>
           </GlobalContainer>
         </GlobalContainer>
-      </S.ContentView>
+      </GlobalContainer>
     </GlobalSafeAreaView>
   );
 };

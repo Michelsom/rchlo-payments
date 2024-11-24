@@ -2,14 +2,6 @@ import {View} from 'react-native';
 import styled from 'styled-components/native';
 import primitive from '../../global/styles/primitive';
 
-export const Overlay = styled.View`
-  width: 100%;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.5);
-`;
-
 export const ContentContainer = styled(View)`
   width: 100%;
   height: 90%;

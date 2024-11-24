@@ -2,6 +2,7 @@ import React from 'react';
 import {FlatList, ListRenderItem, Modal, View} from 'react-native';
 import {PaymentResume} from '../../components/PaymentResume';
 import {SelectPaymentButton} from '../../components/SelectPaymentButton';
+import {GlobalContainer} from '../../global/components/GlobalContainer';
 import {Simulation} from '../../models/userData';
 import {maskValue} from '../../utils/masks';
 import {InstallmentsHeader} from './Components/InstallmentsHeader';
@@ -42,28 +43,36 @@ export const Installments = ({
       }}
       transparent={true}
       testID="modal-installments">
-      <S.Overlay>
-        <S.ContentContainer>
-          <S.HandleBar {...panResponder.panHandlers} testID="handle-bar" />
-          <InstallmentsHeader onClose={onClose} />
-          <FlatList
-            data={[...payment.simulation].reverse()}
-            renderItem={renderItem}
-            keyExtractor={(_, index) => index.toString()}
-            showsVerticalScrollIndicator={false}
-            ListFooterComponent={<View style={{height: 120}} />}
-          />
-        </S.ContentContainer>
-        <PaymentResume
-          title="Continuar"
-          disableButton={!simulationData}
-          handleButton={() => {
-            if (simulationData) {
-              saveInstallments();
-            }
-          }}
-        />
-      </S.Overlay>
+      <GlobalContainer
+        direction="column"
+        alignItems="center"
+        justify="center"
+        style={{flex: 1, backgroundColor: 'rgba(0, 0, 0, 0.5)'}}
+        children={
+          <>
+            <S.ContentContainer>
+              <S.HandleBar {...panResponder.panHandlers} testID="handle-bar" />
+              <InstallmentsHeader onClose={onClose} />
+              <FlatList
+                data={[...payment.simulation].reverse()}
+                renderItem={renderItem}
+                keyExtractor={(_, index) => index.toString()}
+                showsVerticalScrollIndicator={false}
+                ListFooterComponent={<View style={{height: 120}} />}
+              />
+            </S.ContentContainer>
+            <PaymentResume
+              title="Continuar"
+              disableButton={!simulationData}
+              handleButton={() => {
+                if (simulationData) {
+                  saveInstallments();
+                }
+              }}
+            />
+          </>
+        }
+      />
     </Modal>
   );
 };

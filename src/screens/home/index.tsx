@@ -3,13 +3,13 @@ import {FlatList, ListRenderItem, View} from 'react-native';
 import {HeaderComponent} from '../../components/HeaderComponent';
 import {PaymentResume} from '../../components/PaymentResume';
 import {SelectPaymentButton} from '../../components/SelectPaymentButton';
+import {GlobalContainer} from '../../global/components/GlobalContainer';
 import GlobalSafeAreaView from '../../global/components/GlobalSafeArea';
 import {Card} from '../../models/userData';
 import {maskValue} from '../../utils/masks';
 import {Installments} from '../installments';
 import {ListHeaderComponent} from './components/ListHeaderComponent';
 import {PaymentInfo} from './components/PaymentInfo';
-import * as S from './styles';
 import {usePaymentViewModel} from './viewModel';
 
 export const Home = () => {
@@ -66,24 +66,32 @@ export const Home = () => {
 
   return (
     <GlobalSafeAreaView>
-      <S.Content>
-        <HeaderComponent leftIconName="keyboard-arrow-left" />
-        <FlatList
-          style={{width: '100%', height: '100%'}}
-          ListHeaderComponent={
-            <ListHeaderComponent
-              handleButton={handleButton}
-              responseData={responseData}
-              cardData={cardData}
+      <GlobalContainer
+        alignItems="center"
+        justify="center"
+        direction="column"
+        style={{paddingHorizontal: 20}}
+        children={
+          <>
+            <HeaderComponent leftIconName="keyboard-arrow-left" />
+            <FlatList
+              style={{width: '100%', height: '100%'}}
+              ListHeaderComponent={
+                <ListHeaderComponent
+                  handleButton={handleButton}
+                  responseData={responseData}
+                  cardData={cardData?.card.cardId}
+                />
+              }
+              data={responseData ? responseData.account.cards : []}
+              renderItem={renderItem}
+              ListFooterComponent={<View style={{height: 120}} />}
+              showsVerticalScrollIndicator={false}
+              alwaysBounceVertical={false}
             />
-          }
-          data={responseData ? responseData.account.cards : []}
-          renderItem={renderItem}
-          ListFooterComponent={<View style={{height: 120}} />}
-          showsVerticalScrollIndicator={false}
-          alwaysBounceVertical={false}
-        />
-      </S.Content>
+          </>
+        }
+      />
       <Installments
         isVisible={modalVisible}
         onClose={() => setModalVisible(false)}

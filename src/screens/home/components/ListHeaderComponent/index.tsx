@@ -1,7 +1,6 @@
 import React from 'react';
 import {View} from 'react-native';
 import {SelectPaymentButton} from '../../../../components/SelectPaymentButton';
-import {cardDataPayment} from '../../../../context/model';
 import {GlobalTextComponent} from '../../../../global/components/GlobalTextComponent';
 import {Card, DataMock} from '../../../../models/userData';
 import {maskValue} from '../../../../utils/masks';
@@ -13,7 +12,7 @@ export const ListHeaderComponent = ({
 }: {
   handleButton: (item: Card, type: string) => void;
   responseData: DataMock | null;
-  cardData: cardDataPayment | null;
+  cardData: string | undefined;
 }) => (
   <View>
     <GlobalTextComponent
@@ -63,7 +62,7 @@ export const ListHeaderComponent = ({
             responseData?.account?.balance ?? 0,
           )}`}
           hasRadio={true}
-          selected={responseData.account.accountId === cardData?.card.cardId}
+          selected={responseData.account.accountId === cardData}
         />
       </>
     ) : null}
