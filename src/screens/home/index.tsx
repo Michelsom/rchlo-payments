@@ -5,6 +5,7 @@ import {PaymentResume} from '../../components/PaymentResume';
 import {SelectPaymentButton} from '../../components/SelectPaymentButton';
 import {GlobalContainer} from '../../global/components/GlobalContainer';
 import GlobalSafeAreaView from '../../global/components/GlobalSafeArea';
+import {GlobalEffects} from '../../global/components/GlobalShimmerEffects';
 import {Card} from '../../models/userData';
 import {maskValue} from '../../utils/masks';
 import {Installments} from '../installments';
@@ -35,7 +36,7 @@ export const Home = () => {
       <>
         <SelectPaymentButton
           handleButton={() => handleButton(item, 'card')}
-          title={`Cartão ${item.brand}`}
+          title={`Cartão ${item.name}`}
           description={`Final ${item.cardNumber}`}
           selected={isSelected}
           brandCard={item.brand}
@@ -70,28 +71,29 @@ export const Home = () => {
         alignItems="center"
         justify="center"
         direction="column"
-        style={{paddingHorizontal: 20}}
-        children={
-          <>
-            <HeaderComponent leftIconName="keyboard-arrow-left" />
-            <FlatList
-              style={{width: '100%', height: '100%'}}
-              ListHeaderComponent={
-                <ListHeaderComponent
-                  handleButton={handleButton}
-                  responseData={responseData}
-                  cardData={cardData?.card.cardId}
-                />
-              }
-              data={responseData ? responseData.account.cards : []}
-              renderItem={renderItem}
-              ListFooterComponent={<View style={{height: 120}} />}
-              showsVerticalScrollIndicator={false}
-              alwaysBounceVertical={false}
+        style={{
+          width: '100%',
+          height: '100%',
+          paddingHorizontal: 20,
+        }}>
+        <HeaderComponent leftIconName="keyboard-arrow-left" />
+        <FlatList
+          style={{width: '100%', height: '100%'}}
+          ListEmptyComponent={<GlobalEffects />}
+          ListHeaderComponent={
+            <ListHeaderComponent
+              handleButton={handleButton}
+              responseData={responseData}
+              cardData={cardData?.card.cardId}
             />
-          </>
-        }
-      />
+          }
+          data={responseData ? responseData.account.cards : []}
+          renderItem={renderItem}
+          ListFooterComponent={<View style={{height: 120}} />}
+          showsVerticalScrollIndicator={false}
+          alwaysBounceVertical={false}
+        />
+      </GlobalContainer>
       <Installments
         isVisible={modalVisible}
         onClose={() => setModalVisible(false)}

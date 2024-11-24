@@ -8,7 +8,7 @@ import {clearInstallments, setPaymentInfo} from '../../store/paymentSlice';
 import {RootState} from '../../store/store';
 
 export const usePaymentViewModel = () => {
-  const [responseData, setResponseData] = useState<DataMock | null>(userData);
+  const [responseData, setResponseData] = useState<DataMock | null>(null);
   const {navigate} = useNavigation();
   const {createPayment, cardData} = usePayment();
   const dispatch = useDispatch();
@@ -32,7 +32,7 @@ export const usePaymentViewModel = () => {
       setTimeout(() => {
         setResponseData(response);
         dispatch(setPaymentInfo(response.payment));
-      }, 2000);
+      }, 3000);
     }
     fetchData();
   }, [dispatch]);
