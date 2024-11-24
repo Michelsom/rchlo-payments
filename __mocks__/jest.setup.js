@@ -13,3 +13,9 @@ jest.mock('react-native/Libraries/Components/SafeAreaView/SafeAreaView', () => {
   const SafeAreaView = require('react-native').View;
   return SafeAreaView;
 });
+
+jest.mock('react-native', () => {
+  const RN = jest.requireActual('react-native');
+  RN.Modal = ({children}) => <>{children}</>;
+  return RN;
+});
