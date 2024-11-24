@@ -14,7 +14,12 @@ export const SendTransaction = () => {
   if (loading) {
     return (
       <S.Container onLayout={sendPayment}>
-        <S.Animation source={LoadingAnimation} autoPlay loop />
+        <S.Animation
+          source={LoadingAnimation}
+          autoPlay
+          loop
+          testID="loading-animation"
+        />
         <GlobalTextComponent
           color="Neutral.0"
           fontSize={34}
@@ -59,7 +64,7 @@ export const SendTransaction = () => {
           />
           <GlobalTextComponent
             color="Neutral.900"
-            fontSize={28}
+            fontSize={24}
             fontFamily="montserratBold"
             style={{width: '100%'}}
             textAlign="center"
@@ -85,7 +90,7 @@ export const SendTransaction = () => {
               />
               <GlobalTextComponent
                 color="Neutral.900"
-                fontSize={28}
+                fontSize={24}
                 lineHeight={34}
                 fontFamily="montserratBold"
                 textAlign="center"
@@ -107,7 +112,7 @@ export const SendTransaction = () => {
               />
               <GlobalTextComponent
                 color="Neutral.900"
-                fontSize={28}
+                fontSize={24}
                 lineHeight={34}
                 fontFamily="montserratBold"
                 textAlign="center"
