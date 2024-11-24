@@ -24,8 +24,8 @@ describe('GlobalContainer', () => {
       expect.arrayContaining([
         expect.objectContaining({
           flexDirection: 'row',
-          justifyContent: 'flex-start',
-          alignItems: 'stretch',
+          justifyContent: 'center',
+          alignItems: 'center',
         }),
       ]),
     );
@@ -46,8 +46,8 @@ describe('GlobalContainer', () => {
       expect.arrayContaining([
         expect.objectContaining({
           flexDirection: 'column',
-          justifyContent: 'flex-start',
-          alignItems: 'stretch',
+          justifyContent: 'center',
+          alignItems: 'center',
         }),
         customStyle,
       ]),
