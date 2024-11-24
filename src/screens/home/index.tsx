@@ -53,7 +53,7 @@ export const Home = () => {
                   : 'Escolher parcelas'
               }
               selected
-              leftIconName="keyboard-arrow-right"
+              iconName="keyboard-arrow-right"
             />
             {simulation ? (
               <PaymentInfo simulation={simulation} payment={payment} />
