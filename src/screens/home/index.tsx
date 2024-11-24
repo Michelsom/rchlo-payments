@@ -90,7 +90,7 @@ export const Home = () => {
       />
       <PaymentResume
         title="Pagar"
-        disableButton={!cardData || !simulation}
+        disableButton={!cardData || (cardData?.type === 'card' && !simulation)}
         handleButton={sendPayment}
       />
     </GlobalSafeAreaView>
