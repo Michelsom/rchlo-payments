@@ -12,13 +12,10 @@ export const useInstallmentsViewModel = (onClose: () => void) => {
   const {payment} = useSelector((store: RootState) => store.payment);
 
   const saveInstallments = () => {
-    console.log('aqui fora ' + simulationData);
     if (simulationData) {
-      console.log('aqui dentro ' + simulationData);
       dispatch(setInstallments(simulationData));
-      setSimulationData(null);
       onClose();
-      console.log('aqui dentro 2222' + simulationData);
+      setSimulationData(null);
     }
   };
 
@@ -34,12 +31,13 @@ export const useInstallmentsViewModel = (onClose: () => void) => {
     },
   });
   return {
-    simulationData,
-    setSimulationData,
-    saveInstallments,
+    dispatch,
     getSimulationData,
     maskValue,
     payment,
     panResponder,
+    saveInstallments,
+    simulationData,
+    setSimulationData,
   };
 };

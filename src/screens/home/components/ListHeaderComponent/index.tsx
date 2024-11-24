@@ -1,8 +1,9 @@
 import React from 'react';
 import {View} from 'react-native';
 import {SelectPaymentButton} from '../../../../components/SelectPaymentButton';
+import {cardDataPayment} from '../../../../context/model';
 import {GlobalTextComponent} from '../../../../global/components/GlobalTextComponent';
-import {Card} from '../../../../models/userData';
+import {Card, DataMock} from '../../../../models/userData';
 import {maskValue} from '../../../../utils/masks';
 
 export const ListHeaderComponent = ({
@@ -11,8 +12,8 @@ export const ListHeaderComponent = ({
   cardData,
 }: {
   handleButton: (item: Card, type: string) => void;
-  responseData: any;
-  cardData: any;
+  responseData: DataMock | null;
+  cardData: cardDataPayment | null;
 }) => (
   <View>
     <GlobalTextComponent
@@ -67,7 +68,7 @@ export const ListHeaderComponent = ({
       </>
     ) : null}
 
-    {responseData?.account.cards ? (
+    {responseData?.account.cards.length ? (
       <GlobalTextComponent
         color="Neutral.900"
         fontSize={16}
