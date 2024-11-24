@@ -18,11 +18,12 @@ export const PaymentResume = ({
   const simulation = useSelector(
     (store: RootState) => store.payment.simulation,
   );
-  const installmentText = simulation
-    ? `${simulation.installments}x de ${maskValue(
-        simulation.installmentAmount,
-      )}`
-    : maskValue(paymentData.amount);
+  const installmentText =
+    simulation !== null && simulation.installments
+      ? `${simulation.installments}x de ${maskValue(
+          simulation.installmentAmount,
+        )}`
+      : maskValue(paymentData.amount);
   return (
     <S.Container
       disabled={disableButton}
