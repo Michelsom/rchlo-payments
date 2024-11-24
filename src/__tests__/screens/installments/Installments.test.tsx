@@ -1,52 +1,69 @@
-import {useRoute} from '@react-navigation/native';
-import {render} from '@testing-library/react-native';
+import {fireEvent, render} from '@testing-library/react-native';
 import React from 'react';
 import {Provider} from 'react-redux';
-import configureStore from 'redux-mock-store';
-import {userData} from '../../../../data-mock';
+import {mockStore} from '../../../../__mocks__/redux-mock';
 import {Installments} from '../../../screens/installments';
-import {useInstallmentsViewModel} from '../../../screens/installments/InstallmentsViewModel';
-import {maskValue} from '../../../utils/masks';
+import {useInstallmentsViewModel} from '../../../screens/installments/viewModel';
 
-const mockStore = configureStore([]);
-const store = mockStore({
-  payment: userData.payment,
-  account: userData.account,
-});
-jest.mock('@react-navigation/native', () => ({
-  useRoute: jest.fn(),
-}));
+jest.mock('../../../screens/installments/viewModel');
 
-jest.mock('../../../screens/installments/InstallmentsViewModel', () => ({
-  useInstallmentsViewModel: jest.fn(),
-}));
+const mockUseInstallmentsViewModel = useInstallmentsViewModel as jest.Mock;
 
 describe('Installments Screen', () => {
-  it('renders correctly with data', () => {
-    (useRoute as jest.Mock).mockReturnValue({
-      params: {
-        installments: userData.payment.simulation,
-      },
-    });
+  const mockOnClose = jest.fn();
 
-    (useInstallmentsViewModel as jest.Mock).mockReturnValue({
-      simulationData: null,
-      setSimulationData: jest.fn(),
-      saveInstallments: jest.fn(),
-      maskValue: jest.fn(value => `${maskValue(value)}`),
-      goBack: jest.fn(),
-    });
+  const defaultMockValues = {
+    payment: {simulation: []},
+    panResponder: {},
+    setSimulationData: jest.fn(),
+    simulationData: null,
+    saveInstallments: jest.fn(),
+  };
 
-    const {getByText} = render(
-      <Provider store={store}>
-        <Installments />
+  beforeEach(() => {
+    mockUseInstallmentsViewModel.mockReturnValue(defaultMockValues);
+  });
+
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
+
+  const setup = (props = {}) => {
+    return render(
+      <Provider store={mockStore}>
+        <Installments isVisible={true} onClose={mockOnClose} {...props} />
       </Provider>,
     );
+  };
 
-    expect(getByText('Parcelas do pagamento')).toBeTruthy();
-    if (!userData.payment.simulation) {
-      return;
-    }
-    expect(getByText('Continuar')).toBeTruthy();
+  it('should render the modal when visible', () => {
+    const {getByTestId} = setup();
+    expect(getByTestId('modal-installments')).toBeTruthy();
+  });
+
+  it('should call onClose when the modal is requested to close', () => {
+    const {getByTestId} = setup();
+    fireEvent(getByTestId('modal-installments'), 'onRequestClose');
+    expect(mockOnClose).toHaveBeenCalled();
+  });
+
+  it('should render the handle bar', () => {
+    const {getByTestId} = setup();
+    expect(getByTestId('handle-bar')).toBeTruthy();
+  });
+
+  it('should call saveInstallments when the continue button is pressed and simulation data is selected', () => {
+    const mockSaveInstallments = jest.fn();
+    mockUseInstallmentsViewModel.mockReturnValue({
+      ...defaultMockValues,
+      simulationData: {installments: 1, installmentAmount: 100},
+      saveInstallments: mockSaveInstallments,
+    });
+
+    const {getByText} = setup({
+      simulation: [{installments: 1, installmentAmount: 100}],
+    });
+    fireEvent.press(getByText('Continuar'));
+    expect(mockSaveInstallments).toHaveBeenCalled();
   });
 });

@@ -19,7 +19,7 @@ describe('InstallmentsHeader', () => {
     const mockOnClose = jest.fn();
     render(<InstallmentsHeader onClose={mockOnClose} />);
 
-    const closeButton = screen.getByRole('button', {name: /close/i});
+    const closeButton = screen.getByTestId('close-button');
     fireEvent.press(closeButton);
 
     expect(mockOnClose).toHaveBeenCalled();
