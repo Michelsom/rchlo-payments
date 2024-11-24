@@ -9,6 +9,9 @@ O rchlo-payments é um aplicativo desenvolvido como parte de um teste para uma v
 - Realização de pagamentos com o saldo.
 - Realização de pagamentos no crédito.
 - Seleção de parcelas para divisão do pagamento.
+- Resumo de valor total com taxas do cartão.
+- Envio da transação(exemplo)
+- Tela de transação efetuada com sucesso.
 
 ## Tecnologias Utilizadas
 
@@ -16,6 +19,7 @@ O rchlo-payments é um aplicativo desenvolvido como parte de um teste para uma v
 - Redux e Redux Toolkit
 - React Navigation
 - Styled Components
+- React native Safe Area Context
 - Jest e React Testing Library
 
 ## Instalação
