@@ -1,15 +1,7 @@
 import React, {createContext, useContext} from 'react';
 import {Card} from '../models/userData';
+import {cardDataPayment, PaymentProps} from './model';
 
-interface PaymentProps {
-  createPayment: (cardData: Card, type: string) => void;
-  cardData?: cardDataPayment | null;
-  clearPayment: () => void;
-}
-interface cardDataPayment {
-  card: Card;
-  type: string;
-}
 const PixPayment = createContext<PaymentProps>({} as PaymentProps);
 
 export const PaymentProvider: React.FC<{children: React.ReactNode}> = ({
