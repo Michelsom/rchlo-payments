@@ -13,13 +13,13 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2724FFF6A7EC4E1D95D97FFC /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B1D3E64C16A14FCEBF202961 /* Montserrat-Bold.ttf */; };
+		27E6744E9B4E9DAFF7CAF43B /* libPods-rchloPayment.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 72F1252A72886429340AAF73 /* libPods-rchloPayment.a */; };
 		4DD837A4AC834BF48707699B /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55602E5F0AC64D5982FD8110 /* Montserrat-SemiBold.ttf */; };
-		7FEA1D640FA664BC8153A355 /* libPods-rchloPayment-rchloPaymentTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3620F77B3A22A12FAF20D271 /* libPods-rchloPayment-rchloPaymentTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		A96724B9259010F0959B7C78 /* libPods-rchloPayment-rchloPaymentTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 729A70504B3FF535EBA9182D /* libPods-rchloPayment-rchloPaymentTests.a */; };
 		AED192E0A16A4F4D8F94149D /* Montserrat-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ABAC365E707D436CAFC4DFF1 /* Montserrat-Light.ttf */; };
 		B54BC40139EF4991B5D80050 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 24C0049B3A804299ADD0AF7A /* Montserrat-Regular.ttf */; };
 		BE2B98C8B6C34B31BCA19235 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 319377E257AC4971A1445D2E /* Montserrat-Medium.ttf */; };
-		C1BA05A98D9A605CAFC8B746 /* libPods-rchloPayment.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C0A9D009C1C9A63988A61405 /* libPods-rchloPayment.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,18 +43,18 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = rchloPayment/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = rchloPayment/main.m; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = rchloPayment/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		14A998262B917476CC38F959 /* Pods-rchloPayment-rchloPaymentTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rchloPayment-rchloPaymentTests.release.xcconfig"; path = "Target Support Files/Pods-rchloPayment-rchloPaymentTests/Pods-rchloPayment-rchloPaymentTests.release.xcconfig"; sourceTree = "<group>"; };
 		24C0049B3A804299ADD0AF7A /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Montserrat-Regular.ttf"; path = "../assets/fonts/Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		319377E257AC4971A1445D2E /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Montserrat-Medium.ttf"; path = "../assets/fonts/Montserrat-Medium.ttf"; sourceTree = "<group>"; };
-		3620F77B3A22A12FAF20D271 /* libPods-rchloPayment-rchloPaymentTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-rchloPayment-rchloPaymentTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		437207C4395C18327182F2F5 /* Pods-rchloPayment-rchloPaymentTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rchloPayment-rchloPaymentTests.release.xcconfig"; path = "Target Support Files/Pods-rchloPayment-rchloPaymentTests/Pods-rchloPayment-rchloPaymentTests.release.xcconfig"; sourceTree = "<group>"; };
 		55602E5F0AC64D5982FD8110 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Montserrat-SemiBold.ttf"; path = "../assets/fonts/Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
+		729A70504B3FF535EBA9182D /* libPods-rchloPayment-rchloPaymentTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-rchloPayment-rchloPaymentTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		72F1252A72886429340AAF73 /* libPods-rchloPayment.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-rchloPayment.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = rchloPayment/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		A27FA6C0EE667D9DC47D285E /* Pods-rchloPayment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rchloPayment.debug.xcconfig"; path = "Target Support Files/Pods-rchloPayment/Pods-rchloPayment.debug.xcconfig"; sourceTree = "<group>"; };
 		ABAC365E707D436CAFC4DFF1 /* Montserrat-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Montserrat-Light.ttf"; path = "../assets/fonts/Montserrat-Light.ttf"; sourceTree = "<group>"; };
-		B1354A88BB69F4CF5949AE7C /* Pods-rchloPayment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rchloPayment.release.xcconfig"; path = "Target Support Files/Pods-rchloPayment/Pods-rchloPayment.release.xcconfig"; sourceTree = "<group>"; };
 		B1D3E64C16A14FCEBF202961 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Montserrat-Bold.ttf"; path = "../assets/fonts/Montserrat-Bold.ttf"; sourceTree = "<group>"; };
-		C0A9D009C1C9A63988A61405 /* libPods-rchloPayment.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-rchloPayment.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C4F937B0CA6262495A1E0F9F /* Pods-rchloPayment-rchloPaymentTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rchloPayment-rchloPaymentTests.debug.xcconfig"; path = "Target Support Files/Pods-rchloPayment-rchloPaymentTests/Pods-rchloPayment-rchloPaymentTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C63EC73F7C16CBEC95E16B32 /* Pods-rchloPayment-rchloPaymentTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rchloPayment-rchloPaymentTests.debug.xcconfig"; path = "Target Support Files/Pods-rchloPayment-rchloPaymentTests/Pods-rchloPayment-rchloPaymentTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D97E8072FF3C0984DCB22754 /* Pods-rchloPayment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rchloPayment.debug.xcconfig"; path = "Target Support Files/Pods-rchloPayment/Pods-rchloPayment.debug.xcconfig"; sourceTree = "<group>"; };
+		DBAA23F8F4852888BE5E9ECE /* Pods-rchloPayment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rchloPayment.release.xcconfig"; path = "Target Support Files/Pods-rchloPayment/Pods-rchloPayment.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -63,7 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7FEA1D640FA664BC8153A355 /* libPods-rchloPayment-rchloPaymentTests.a in Frameworks */,
+				A96724B9259010F0959B7C78 /* libPods-rchloPayment-rchloPaymentTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,7 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1BA05A98D9A605CAFC8B746 /* libPods-rchloPayment.a in Frameworks */,
+				27E6744E9B4E9DAFF7CAF43B /* libPods-rchloPayment.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,8 +113,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				C0A9D009C1C9A63988A61405 /* libPods-rchloPayment.a */,
-				3620F77B3A22A12FAF20D271 /* libPods-rchloPayment-rchloPaymentTests.a */,
+				72F1252A72886429340AAF73 /* libPods-rchloPayment.a */,
+				729A70504B3FF535EBA9182D /* libPods-rchloPayment-rchloPaymentTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -167,10 +167,10 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				A27FA6C0EE667D9DC47D285E /* Pods-rchloPayment.debug.xcconfig */,
-				B1354A88BB69F4CF5949AE7C /* Pods-rchloPayment.release.xcconfig */,
-				C4F937B0CA6262495A1E0F9F /* Pods-rchloPayment-rchloPaymentTests.debug.xcconfig */,
-				437207C4395C18327182F2F5 /* Pods-rchloPayment-rchloPaymentTests.release.xcconfig */,
+				D97E8072FF3C0984DCB22754 /* Pods-rchloPayment.debug.xcconfig */,
+				DBAA23F8F4852888BE5E9ECE /* Pods-rchloPayment.release.xcconfig */,
+				C63EC73F7C16CBEC95E16B32 /* Pods-rchloPayment-rchloPaymentTests.debug.xcconfig */,
+				14A998262B917476CC38F959 /* Pods-rchloPayment-rchloPaymentTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -182,12 +182,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "rchloPaymentTests" */;
 			buildPhases = (
-				6C630DA2F9B57AC2ED284B31 /* [CP] Check Pods Manifest.lock */,
+				26775DE2C1BD9E23213FC13B /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				33101DE9B43FDD544617E163 /* [CP] Embed Pods Frameworks */,
-				971DCD31C7785C9C0469C481 /* [CP] Copy Pods Resources */,
+				B7A0CAD42CFB1FE2408822B6 /* [CP] Embed Pods Frameworks */,
+				71FBC0EEE4A90892E037BFB2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -203,13 +203,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "rchloPayment" */;
 			buildPhases = (
-				96A062C10B3760F96E3AA689 /* [CP] Check Pods Manifest.lock */,
+				1500A2F7450844147F9D0AD4 /* [CP] Check Pods Manifest.lock */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				CF27C6FC4275E9E8DA84623D /* [CP] Embed Pods Frameworks */,
-				6196CF22C60E8C9013D595DA /* [CP] Copy Pods Resources */,
+				8C8C5B36D0444953D5BCF470 /* [CP] Embed Pods Frameworks */,
+				C1A9EBF5395EFDF45AE90F9B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -298,63 +298,7 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"$REACT_NATIVE_PATH/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"$REACT_NATIVE_PATH/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
 		};
-		33101DE9B43FDD544617E163 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-rchloPayment-rchloPaymentTests/Pods-rchloPayment-rchloPaymentTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-rchloPayment-rchloPaymentTests/Pods-rchloPayment-rchloPaymentTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-rchloPayment-rchloPaymentTests/Pods-rchloPayment-rchloPaymentTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6196CF22C60E8C9013D595DA /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-rchloPayment/Pods-rchloPayment-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-rchloPayment/Pods-rchloPayment-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-rchloPayment/Pods-rchloPayment-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6C630DA2F9B57AC2ED284B31 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-rchloPayment-rchloPaymentTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		96A062C10B3760F96E3AA689 /* [CP] Check Pods Manifest.lock */ = {
+		1500A2F7450844147F9D0AD4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -376,7 +320,29 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		971DCD31C7785C9C0469C481 /* [CP] Copy Pods Resources */ = {
+		26775DE2C1BD9E23213FC13B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-rchloPayment-rchloPaymentTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		71FBC0EEE4A90892E037BFB2 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -393,7 +359,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-rchloPayment-rchloPaymentTests/Pods-rchloPayment-rchloPaymentTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		CF27C6FC4275E9E8DA84623D /* [CP] Embed Pods Frameworks */ = {
+		8C8C5B36D0444953D5BCF470 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -408,6 +374,40 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-rchloPayment/Pods-rchloPayment-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B7A0CAD42CFB1FE2408822B6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-rchloPayment-rchloPaymentTests/Pods-rchloPayment-rchloPaymentTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-rchloPayment-rchloPaymentTests/Pods-rchloPayment-rchloPaymentTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-rchloPayment-rchloPaymentTests/Pods-rchloPayment-rchloPaymentTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C1A9EBF5395EFDF45AE90F9B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-rchloPayment/Pods-rchloPayment-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-rchloPayment/Pods-rchloPayment-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-rchloPayment/Pods-rchloPayment-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -443,7 +443,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C4F937B0CA6262495A1E0F9F /* Pods-rchloPayment-rchloPaymentTests.debug.xcconfig */;
+			baseConfigurationReference = C63EC73F7C16CBEC95E16B32 /* Pods-rchloPayment-rchloPaymentTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -470,7 +470,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 437207C4395C18327182F2F5 /* Pods-rchloPayment-rchloPaymentTests.release.xcconfig */;
+			baseConfigurationReference = 14A998262B917476CC38F959 /* Pods-rchloPayment-rchloPaymentTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -494,7 +494,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A27FA6C0EE667D9DC47D285E /* Pods-rchloPayment.debug.xcconfig */;
+			baseConfigurationReference = D97E8072FF3C0984DCB22754 /* Pods-rchloPayment.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -522,7 +522,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B1354A88BB69F4CF5949AE7C /* Pods-rchloPayment.release.xcconfig */;
+			baseConfigurationReference = DBAA23F8F4852888BE5E9ECE /* Pods-rchloPayment.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
