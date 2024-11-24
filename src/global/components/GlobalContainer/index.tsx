@@ -7,6 +7,7 @@ interface FlexContainerProps {
   alignItems?: FlexStyle['alignItems'];
   style?: ViewStyle;
   children: React.ReactNode;
+  testID?: string;
 }
 
 export const GlobalContainer: React.FC<FlexContainerProps> = ({
@@ -15,9 +16,11 @@ export const GlobalContainer: React.FC<FlexContainerProps> = ({
   alignItems = 'stretch',
   style,
   children,
+  testID = 'container',
 }) => {
   return (
     <View
+      testID={testID}
       style={[
         {
           flexDirection: direction,

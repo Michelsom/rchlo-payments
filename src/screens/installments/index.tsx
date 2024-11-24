@@ -3,6 +3,7 @@ import {FlatList, ListRenderItem, Modal, View} from 'react-native';
 import {PaymentResume} from '../../components/PaymentResume';
 import {SelectPaymentButton} from '../../components/SelectPaymentButton';
 import {Simulation} from '../../models/userData';
+import {maskValue} from '../../utils/masks';
 import {InstallmentsHeader} from './Components/InstallmentsHeader';
 import * as S from './styles';
 import {useInstallmentsViewModel} from './viewModel';
@@ -15,12 +16,11 @@ export const Installments = ({
   onClose: () => void;
 }) => {
   const {
-    simulationData,
-    setSimulationData,
-    saveInstallments,
-    maskValue,
     payment,
     panResponder,
+    setSimulationData,
+    simulationData,
+    saveInstallments,
   } = useInstallmentsViewModel(onClose);
 
   const renderItem: ListRenderItem<Simulation> = ({item}) => (
@@ -35,11 +35,16 @@ export const Installments = ({
     <Modal
       visible={isVisible}
       animationType="slide"
-      onRequestClose={onClose}
-      transparent={true}>
+      onRequestClose={() => {
+        if (onClose) {
+          onClose();
+        }
+      }}
+      transparent={true}
+      testID="modal-installments">
       <S.Overlay>
         <S.ContentContainer>
-          <S.HandleBar {...panResponder.panHandlers} />
+          <S.HandleBar {...panResponder.panHandlers} testID="handle-bar" />
           <InstallmentsHeader onClose={onClose} />
           <FlatList
             data={[...payment.simulation].reverse()}
@@ -52,7 +57,11 @@ export const Installments = ({
         <PaymentResume
           title="Continuar"
           disableButton={!simulationData}
-          handleButton={saveInstallments}
+          handleButton={() => {
+            if (simulationData) {
+              saveInstallments();
+            }
+          }}
         />
       </S.Overlay>
     </Modal>

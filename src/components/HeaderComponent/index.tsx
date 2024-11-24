@@ -17,6 +17,7 @@ const RenderIconButton = ({
       action={action}
       iconColor={'Green.900'}
       iconSize={28}
+      testID={iconName}
     />
   ) : (
     <View />

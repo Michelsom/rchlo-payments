@@ -16,6 +16,7 @@ interface IconPropsExtended {
   color: GlobalColor;
   size: number;
   style?: TextStyle;
+  testID?: string;
 }
 
 const iconLibraries: IconLibraries[] = [
@@ -29,6 +30,7 @@ export const GlobalIcon: React.FC<IconPropsExtended> = ({
   color,
   size,
   style,
+  testID,
 }) => {
   const findIconLibrary = (): IconLibraries | null => {
     for (const IconLib of iconLibraries) {
@@ -45,6 +47,7 @@ export const GlobalIcon: React.FC<IconPropsExtended> = ({
   }
   return (
     <IconLib
+      testID={testID}
       style={style}
       name={iconName}
       size={size}

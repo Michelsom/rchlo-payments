@@ -10,10 +10,10 @@ interface SelectPaymentButtonProps {
   selected: boolean;
   brandCard?: string;
   hasRadio?: boolean;
-  leftIconName?: string;
+  iconName?: string;
 }
 const iconsMap: {[key: string]: React.ReactNode} = {
-  amex: <Icons.AmericanExpress width={25} height={25} />,
+  amex: <Icons.AmericanExpress width={25} height={25} TestId="amex-icon" />,
   diners: <Icons.Diners width={25} height={25} />,
   elo: <Icons.Elo width={25} height={25} />,
   hipercard: <Icons.Hipercard width={25} height={25} />,
@@ -29,11 +29,14 @@ export const SelectPaymentButton = memo(
     selected,
     brandCard,
     hasRadio,
-    leftIconName,
+    iconName,
   }: SelectPaymentButtonProps) => (
-    <S.ButtonContainer onPress={handleButton} hasDescription={!description}>
+    <S.ButtonContainer
+      testID="button-container"
+      onPress={handleButton}
+      hasDescription={!description}>
       {hasRadio ? (
-        <S.RadioContainer>
+        <S.RadioContainer testID="radio-button">
           <GlobalIcon
             iconName={selected ? 'radio-button-on' : 'radio-button-off'}
             color="Green.600"
@@ -42,8 +45,8 @@ export const SelectPaymentButton = memo(
         </S.RadioContainer>
       ) : null}
       <S.CardInfoContainer style={{marginLeft: hasRadio ? 12 : 0}}>
-        <S.CardDetails>
-          {brandCard && iconsMap[brandCard.toLowerCase()]}
+        <S.CardDetails testID={`${brandCard}-icon`}>
+          {brandCard ? iconsMap[brandCard.toLowerCase()] : null}
           <GlobalTextComponent
             color="Green.600"
             fontSize={18}
@@ -66,8 +69,13 @@ export const SelectPaymentButton = memo(
           />
         ) : null}
       </S.CardInfoContainer>
-      {leftIconName ? (
-        <GlobalIcon iconName={leftIconName} color="Green.600" size={28} />
+      {iconName ? (
+        <GlobalIcon
+          testID="test-icon"
+          iconName={iconName}
+          color="Green.600"
+          size={28}
+        />
       ) : null}
     </S.ButtonContainer>
   ),

@@ -18,13 +18,11 @@ export const PaymentResume = ({
   const simulation = useSelector(
     (store: RootState) => store.payment.simulation,
   );
-  const installmentText =
-    simulation !== null
-      ? `${simulation.installments}x de ${maskValue(
-          simulation.installmentAmount,
-        )}`
-      : maskValue(paymentData.amount);
-  console.log('---->>', disableButton);
+  const installmentText = simulation
+    ? `${simulation.installments}x de ${maskValue(
+        simulation.installmentAmount,
+      )}`
+    : maskValue(paymentData.amount);
   return (
     <S.Container
       disabled={disableButton}
@@ -42,6 +40,7 @@ export const PaymentResume = ({
           color="Neutral.900"
           fontSize={22}
           fontFamily="montserratBold"
+          testId="installmentText"
           text={installmentText}
         />
       </S.InfoContainer>

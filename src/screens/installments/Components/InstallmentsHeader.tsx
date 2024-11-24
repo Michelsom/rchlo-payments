@@ -22,6 +22,7 @@ export const InstallmentsHeader: React.FC<InstallmentsHeaderProps> = ({
           text="Parcelas do pagamento"
         />
         <GlobalIconButton
+          testID="close-button"
           iconName={'close'}
           action={onClose}
           iconColor={'Green.900'}
