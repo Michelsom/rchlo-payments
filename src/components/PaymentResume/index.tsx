@@ -49,7 +49,7 @@ export const PaymentResume = ({
       <S.ButtonContainer disabled={disableButton}>
         <GlobalTextComponent
           color="Neutral.0"
-          fontSize={18}
+          fontSize={16}
           lineHeight={18}
           fontFamily="montserratMedium"
           text={title || 'Pagar'}

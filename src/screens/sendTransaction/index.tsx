@@ -31,9 +31,9 @@ export const SendTransaction = () => {
             />
             <GlobalTextComponent
               color="Neutral.0"
-              fontSize={34}
-              lineHeight={38}
-              fontFamily="montserratBold"
+              fontSize={30}
+              lineHeight={34}
+              fontFamily="montserratSemiBold"
               textAlign="center"
               text={'Processando\nsua transferência'}
             />
@@ -55,8 +55,8 @@ export const SendTransaction = () => {
         />
         <GlobalTextComponent
           color="Neutral.900"
-          fontSize={32}
-          fontFamily="montserratBold"
+          fontSize={30}
+          fontFamily="montserratSemiBold"
           style={{width: '100%', textAlign: 'center', marginTop: 16}}
           text={'Pix realizado com\nsucesso!'}
         />
@@ -69,7 +69,7 @@ export const SendTransaction = () => {
           <S.Animation source={CheckedAnimation} loop={false} autoPlay />
           <GlobalTextComponent
             color="Neutral.800"
-            fontSize={22}
+            fontSize={18}
             lineHeight={26}
             fontFamily="montserratRegular"
             style={{width: '100%'}}
@@ -96,7 +96,7 @@ export const SendTransaction = () => {
               style={{width: '50%'}}>
               <GlobalTextComponent
                 color="Neutral.900"
-                fontSize={22}
+                fontSize={18}
                 lineHeight={32}
                 fontFamily="montserratRegular"
                 textAlign="center"
@@ -118,7 +118,7 @@ export const SendTransaction = () => {
               style={{width: '50%'}}>
               <GlobalTextComponent
                 color="Neutral.900"
-                fontSize={22}
+                fontSize={18}
                 lineHeight={32}
                 fontFamily="montserratRegular"
                 textAlign="center"
