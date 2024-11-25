@@ -63,7 +63,6 @@ Execute os testes com o seguinte comando:
 - bash
 - yarn test
 
+## Links dos videos 
 
-<video controls width="600">
-  <source src="rchlo-payments/simulator-iPhone.mp4" type="video/mp4">
-</video>
+- https://github.com/Michelsom/rchlo-payments/blob/main/simulator-iPhone.mp4
