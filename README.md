@@ -49,37 +49,61 @@ Certifique-se de que seu ambiente possui as seguintes dependências instaladas:
    ```bash
    cd rchlo-payments
 Instale as dependências do projeto:
+   ```bash
+   yarn install
+   ```
 
-yarn install
 No macOS, instale as dependências do iOS com CocoaPods:
-
+```bash
 cd ios && pod install && cd ..
+```
+
 Configure o arquivo local.properties para Android:
 
 Navegue até o diretório android/ no seu projeto.
 Crie um arquivo chamado local.properties (caso ainda não exista).
+
 Adicione o caminho para o SDK do Android:
+
 sdk.dir=/caminho/para/android/sdk
+
 Exemplo no macOS:
+
 sdk.dir=/Users/seu-usuario/Library/Android/sdk
-Executando o Aplicativo
-iOS
+
+- Executando o Aplicativo
+- 
+### iOS
+
 Para executar no iOS, use:
 
+```bash
 yarn ios
+```
+
 Certifique-se de que o simulador do iOS está aberto ou que um dispositivo físico está conectado.
 
-Android
+### Android
+
 Para executar no Android, use:
 
+```bash
 yarn android
+```
+
 Certifique-se de que um dispositivo ou emulador Android está conectado e funcionando.
 
-Testes
+### Testes
+
 Execute os testes do projeto com:
 
+```bash
 yarn test
-Vídeos Demonstrativos
+```
+
+### Vídeos Demonstrativos
+
 Veja um vídeo de demonstração do aplicativo:
 
-<video controls width="600"> <source src="https://github.com/Michelsom/rchlo-payments/blob/main/simulator-iPhone.mp4" type="video/mp4"> Seu navegador não suporta a reprodução do vídeo. </video> ```
+- https://github.com/Michelsom/rchlo-payments/blob/main/simulator-iPhone.mp4
+
