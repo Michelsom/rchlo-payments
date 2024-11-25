@@ -71,9 +71,9 @@ Exemplo no macOS:
 
 sdk.dir=/Users/seu-usuario/Library/Android/sdk
 
-- Executando o Aplicativo
-- 
-### iOS
+### Executando o Aplicativo
+
+## iOS
 
 Para executar no iOS, use:
 
@@ -83,7 +83,7 @@ yarn ios
 
 Certifique-se de que o simulador do iOS está aberto ou que um dispositivo físico está conectado.
 
-### Android
+## Android
 
 Para executar no Android, use:
 
