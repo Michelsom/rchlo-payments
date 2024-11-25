@@ -62,3 +62,9 @@ Execute os testes com o seguinte comando:
 
 - bash
 - yarn test
+
+
+<video controls width="600">
+  <source src="caminho/para/o/video.mp4" type="video/mp4">
+  Seu navegador não suporta o elemento de vídeo.
+</video>
