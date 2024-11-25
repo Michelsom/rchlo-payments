@@ -10,7 +10,7 @@ O rchlo-payments é um aplicativo desenvolvido como parte de um teste para uma v
 - Realização de pagamentos no crédito.
 - Seleção de parcelas para divisão do pagamento.
 - Resumo de valor total com taxas do cartão.
-- Envio da transação(exemplo)
+- Envio da transação (exemplo).
 - Tela de transação efetuada com sucesso.
 
 ## Tecnologias Utilizadas
@@ -19,50 +19,67 @@ O rchlo-payments é um aplicativo desenvolvido como parte de um teste para uma v
 - Redux e Redux Toolkit
 - React Navigation
 - Styled Components
-- React native Safe Area Context
+- React Native Safe Area Context
 - Jest e React Testing Library
 
 ## Instalação
 
 ### Pré-requisitos
 
-- Node.js versão 12 ou superior
-- Yarn
+Certifique-se de que seu ambiente possui as seguintes dependências instaladas:
 
-## Instalação
+- Node.js versão 12 ou superior.
+- Yarn.
+- Android Studio (para configurar o SDK do Android).
+- Xcode (para rodar no iOS).
 
-Para configurar o ambiente de desenvolvimento e executar o aplicativo, siga os passos abaixo:
+### Configuração
 
-- bash
+1. Clone o repositório para o seu ambiente local:
+   - **HTTPS**:
+     ```bash
+     git clone https://github.com/Michelsom/rchlo-payments.git
+     ```
+   - **SSH**:
+     ```bash
+     git clone git@github.com:Michelsom/rchlo-payments.git
+     ```
 
-  (HTTPS)
+2. Navegue até o diretório do projeto:
+   ```bash
+   cd rchlo-payments
+Instale as dependências do projeto:
 
-- git clone https://github.com/Michelsom/rchlo-payments.git
+yarn install
+No macOS, instale as dependências do iOS com CocoaPods:
 
-  (SSH)
+cd ios && pod install && cd ..
+Configure o arquivo local.properties para Android:
 
-- git clone git@github.com:Michelsom/rchlo-payments.git
+Navegue até o diretório android/ no seu projeto.
+Crie um arquivo chamado local.properties (caso ainda não exista).
+Adicione o caminho para o SDK do Android:
+sdk.dir=/caminho/para/android/sdk
+Exemplo no macOS:
+sdk.dir=/Users/seu-usuario/Library/Android/sdk
+Executando o Aplicativo
+iOS
+Para executar no iOS, use:
 
-- yarn install
-- cd ios && pod install && cd ..
+yarn ios
+Certifique-se de que o simulador do iOS está aberto ou que um dispositivo físico está conectado.
 
-### Executando o Aplicativo
+Android
+Para executar no Android, use:
 
-(IOS)
+yarn android
+Certifique-se de que um dispositivo ou emulador Android está conectado e funcionando.
 
-- yarn ios
+Testes
+Execute os testes do projeto com:
 
-  (ANDROID)
+yarn test
+Vídeos Demonstrativos
+Veja um vídeo de demonstração do aplicativo:
 
-- yarn android
-
-## Testes
-
-Execute os testes com o seguinte comando:
-
-- bash
-- yarn test
-
-## Links dos videos 
-
-- https://github.com/Michelsom/rchlo-payments/blob/main/simulator-iPhone.mp4
+<video controls width="600"> <source src="https://github.com/Michelsom/rchlo-payments/blob/main/simulator-iPhone.mp4" type="video/mp4"> Seu navegador não suporta a reprodução do vídeo. </video> ```
