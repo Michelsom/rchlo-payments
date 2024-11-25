@@ -33,16 +33,17 @@ export const PaymentResume = ({
       <S.InfoContainer>
         <GlobalTextComponent
           color="Neutral.900"
-          fontSize={20}
-          fontFamily="montserratRegular"
+          fontSize={16}
+          fontFamily="montserratLight"
           text="Valor a ser pago"
         />
         <GlobalTextComponent
           color="Neutral.900"
-          fontSize={22}
+          fontSize={20}
           fontFamily="montserratBold"
           testId="installmentText"
           text={installmentText}
+          style={{marginTop: 8}}
         />
       </S.InfoContainer>
       <S.ButtonContainer disabled={disableButton}>

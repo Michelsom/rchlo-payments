@@ -40,7 +40,7 @@ export const SelectPaymentButton = memo(
           <GlobalIcon
             iconName={selected ? 'radio-button-on' : 'radio-button-off'}
             color="Green.600"
-            size={30}
+            size={24}
           />
         </S.RadioContainer>
       ) : null}
